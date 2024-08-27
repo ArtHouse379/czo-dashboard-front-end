@@ -9,7 +9,10 @@ export enum EnumTaskPriority {
 export interface ITaskResponse extends IBase {
     name: string
     priority?: EnumTaskPriority
-    isCompleted: boolean 
+    status: string
+    terminationDate: string
+    isCompleted: boolean
+    notes: string
 }
 
 export type TypeTaskFormState = Partial<Omit<ITaskResponse, 'id' | 'updatedAt'>>

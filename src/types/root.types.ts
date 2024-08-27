@@ -1,5 +1,5 @@
 export interface IBase {
-    id: string
-    createdAt?: string
+    readonly id: string
+    readonly createdAt?: string
     updatedAt?: string
 }

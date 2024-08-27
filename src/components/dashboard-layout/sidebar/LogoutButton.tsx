@@ -15,12 +15,12 @@ export function LogoutButton() {
     })
 
     return (
-        <div className="absolute top-1 right-1">
+        <div className="absolute top-2 right-1">
             <button
                 className="opacity-20 hover:opacity-100 transition-opacity duration-300"
                 onClick={() => mutate()}
             >
-                <LogOut size={20} />
+                <LogOut size={25} />
             </button>
         </div>
     )

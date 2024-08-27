@@ -13,9 +13,8 @@ export function useUpdateSettings() {
         onSuccess() {
             toast.success('Successfully update profile!')
             queryClient.invalidateQueries({ queryKey: ['profile'] })
-        } 
+        }
     })
-
 
     return {mutate, isPending}
 }

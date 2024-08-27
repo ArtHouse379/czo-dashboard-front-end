@@ -1,7 +1,7 @@
 'use client'
 
 import { COLORS } from "@/constants/color.constants";
-import { GanttChartSquare } from "lucide-react";
+import { Gavel } from "lucide-react";
 import Link from "next/link";
 import { LogoutButton } from "./LogoutButton";
 import { MENU } from "./menu.data";
@@ -13,28 +13,29 @@ export function Sidebar() {
             <div>
                 <Link
                     href='/i'
-                    className='flex items-center gap-2.5 p-layout border-b border-b-border'
+                    className='flex items-center justify-center gap-2.5 p-layout border-b border-b-border'
                 >
-                    <GanttChartSquare
-                        color={COLORS.secondary}
-                        size={38}
+                    <Gavel
+                        color={COLORS.blueHalfTransparent}
+                        size={50}
                     />
                     <span className="text-2xl font-bold relative">
-                        CZO Work
+                        CZO_Work
                         <span className="absolute -top-1 -right-6 text-xs opacity-40 rotate-[18deg] font-normal">
                             beta
                         </span>
                     </span>
                 </Link>
 
-                <div className="p-3 relative">
+                <div className="py-4 px-2 relative">
                     <LogoutButton />
+                    
                     {MENU.map(item => (
                         <MenuItem 
-                            item={item}
-                            key={item.link}
+                        item={item}
+                        key={item.link}
                         />
-                    ))}
+                        ))}
                 </div>
             </div>
 

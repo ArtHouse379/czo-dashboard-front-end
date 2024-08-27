@@ -36,27 +36,27 @@ export function Auth() {
     } 
 
     return (
-        <div className='flex min-h-screen'>
-            <form className='w-1/4 m-auto shadow bg-sidebar rounded-xl p-layout' onSubmit={handleSubmit(onSubmit)}>
-                    <Heading title='Auth' />
-                    
-                    <Field
-                        id='email'
-                        label='Email:'
-                        placeholder='Enter email:'
-                        type='email'
-                        extra='mb-4'
-                        {...register('email', {required: 'Email is rquired!'})}
-                    />
-                    
-                    <Field
-                        id='password'
-                        label='Password:'
-                        placeholder='Enter password:'
-                        type='password'
-                        extra='mb-6'
-                        {...register('password', {required: 'Password is rquired!'})}
-                    />
+        <div className='flex flex-col min-h-screen bg-blue-900'>
+            <form className='w-1/3 m-auto shadow shadow-gray-800 bg-blue-700 rounded-xl p-layout' onSubmit={handleSubmit(onSubmit)}>
+                <Heading title='Auth' />
+                
+                <Field
+                    id='email'
+                    label='Email:'
+                    placeholder='Enter email:'
+                    type='email'
+                    extra='mb-4'
+                    {...register('email', {required: 'Email is rquired!'})}
+                />
+                
+                <Field
+                    id='password'
+                    label='Password:'
+                    placeholder='Enter password:'
+                    type='password'
+                    extra='mb-6'
+                    {...register('password', {required: 'Password is rquired!'})}
+                />
 
                 <div className='flex items-center gap-5 justify-center'>
                     <Button onClick={() => setIsLoginForm(true)}>Login</Button>

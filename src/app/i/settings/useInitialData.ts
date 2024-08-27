@@ -9,11 +9,10 @@ export function useInitialData(reset: UseFormReset<TypeUserForm>) {
 
     useEffect(() => {
         if(isSuccess && data){
-        reset({
-            email: data.user.email,
-            name: data.user.name,
-
-        })
-    }
+            reset({
+                email: data.user.email,
+                name: data.user.name,
+            })
+        }
     }, [isSuccess])
 }
