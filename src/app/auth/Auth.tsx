@@ -25,7 +25,7 @@ export function Auth() {
         mutationKey: ['auth'],
         mutationFn: (data:IAuthForm) => authService.main(isLoginForm ? 'login' : 'register', data),
         onSuccess(){
-            toast.success('Seccussfuly login!')
+            toast.success('Successfuly login!')
             reset()
             push(DASHBOARD_PAGES.HOME)
         }
@@ -46,7 +46,7 @@ export function Auth() {
                     placeholder='Enter email:'
                     type='email'
                     extra='mb-4'
-                    {...register('email', {required: 'Email is rquired!'})}
+                    {...register('email', {required: 'Email is required!'})}
                 />
                 
                 <Field
@@ -55,7 +55,7 @@ export function Auth() {
                     placeholder='Enter password:'
                     type='password'
                     extra='mb-6'
-                    {...register('password', {required: 'Password is rquired!'})}
+                    {...register('password', {required: 'Password is required!'})}
                 />
 
                 <div className='flex items-center gap-5 justify-center'>

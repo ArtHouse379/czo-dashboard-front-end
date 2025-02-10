@@ -1,6 +1,4 @@
-import { IBase } from "./root.types";
-import Decimal from "decimal.js";
-
+import { IBase } from "./root.types"
 export interface IJointProcurement extends IBase {
     expectedValue?: number
     resultValue?: number

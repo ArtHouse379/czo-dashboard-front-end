@@ -1,6 +1,6 @@
-import { BookUser, Gavel, KanbanSquare, LayoutDashboard, ReceiptText, Settings } from "lucide-react";
-import { IMenuItem } from "./menu.interface";
-import { DASHBOARD_PAGES } from "@/config/pages-url.config";
+import { DASHBOARD_PAGES } from "@/config/pages-url.config"
+import { BookUser, Gavel, KanbanSquare, LayoutDashboard, ReceiptText, Settings } from "lucide-react"
+import { IMenuItem } from "./menu.interface"
 
 export const MENU: IMenuItem[] = [
     {
