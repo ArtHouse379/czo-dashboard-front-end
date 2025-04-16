@@ -1,19 +1,20 @@
-import { Heading } from "@/components/ui/Heading"
-import { NO_INDEX_PAGE } from "@/constants/seo.contants"
-import type { Metadata } from "next"
-import { Statistics } from "./Statistics"
+'use client'
 
-export const metadata: Metadata = {
-    title: 'Dashboard',
-    ...NO_INDEX_PAGE
-}
+import { ContractsOverview } from '@/components/dashboard/ContractsOverview'
+import { CustomerInsights } from '@/components/dashboard/CustomerInsights'
+import { ProcurementAnalytics } from '@/components/dashboard/ProcurementAnalytics'
+import { Heading } from '@/components/ui/Heading'
 
 export default function DashboardPage() {
-    return (
-        <div>
-            <Heading title='Dashboard' />
+	return (
+		<div className='space-y-6'>
+			<Heading title='Dashboard' />
 
-            <Statistics />
-        </div>
-    )
+			<div>
+				<ProcurementAnalytics />
+				<ContractsOverview />
+				<CustomerInsights />
+			</div>
+		</div>
+	)
 }

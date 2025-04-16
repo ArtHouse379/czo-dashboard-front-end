@@ -96,7 +96,12 @@ export function NewAgreementForm({
 				/>
 				<div className='flex gap-4'>
 					<Button>Save</Button>
-					<Button onClick={() => showAgreementForm(false)}>Cancel</Button>
+					<Button
+						type='button'
+						onClick={() => showAgreementForm(false)}
+					>
+						Cancel
+					</Button>
 				</div>
 			</form>
 		</div>

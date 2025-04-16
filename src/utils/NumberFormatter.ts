@@ -1,10 +1,10 @@
 export function LocaleNumberFormatter(number: number) {
-	const data = new Number(number).toLocaleString('ru-RU')
+	const data = new Number(number).toLocaleString('uk-UA')
 	return data
 }
 
 export function PriceUAHFormatter(number: number) {
-	const data = new Number(number).toLocaleString('ru-RU', {
+	const data = new Number(number).toLocaleString('uk-UA', {
 		style: 'currency',
 		currency: 'UAH'
 	})

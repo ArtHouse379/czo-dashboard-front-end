@@ -1,5 +1,10 @@
 export function LocaleDateFormatter(date: string) {
-	const data = new Date(date).toLocaleDateString().replaceAll('/', '.') // * replace / with .
+	const data = new Date(date).toLocaleDateString().replaceAll('/', '.')
+	return data
+}
+
+export function DateFullTimeFormatter(date: string) {
+	const data = new Date(date).toLocaleString('uk-UA', { timeZone: 'UTC' })
 	return data
 }
 

@@ -62,14 +62,6 @@ export default function NewProcurement() {
 					extra='mb-4'
 					{...register('expectedValue', { required: 'Value is required!' })}
 				/>
-				{/* <Field
-					id='resultValue'
-					label='Result value:'
-					placeholder='Enter value (UAH):'
-					type='number'
-					extra='mb-4'
-					{...register('resultValue', { required: 'Value is required!' })}
-				/> */}
 				<Field
 					id='product'
 					label='Product name:'
@@ -102,41 +94,6 @@ export default function NewProcurement() {
 					extra='mb-4'
 					{...register('status', { required: 'Status is required!' })}
 				/>
-				{/* <Field
-					id='announcedAt'
-					label='Announced at:'
-					placeholder='Enter date:'
-					type='datetime-local'
-					extra='mb-4'
-					{...register('announcedAt', { required: 'Date is required!' })}
-				/>
-				<Field
-					id='finishedAt'
-					label='Finished at:'
-					placeholder='Enter date:'
-					type='datetime-local'
-					extra='mb-4'
-					{...register('finishedAt')}
-				/>
-				<Field
-					id='prozorroId'
-					label='Prozorro ID:'
-					placeholder='Enter ID:'
-					type='string'
-					extra='mb-4'
-					{...register('prozorroId', {
-						required: 'ID is required!',
-						pattern: /^UA-\d{4}-\d{2}-\d{2}-\d{6}-[a-z]$/
-					})}
-				/>
-				<Field
-					id='prozorroLink'
-					label='Prozorro link:'
-					placeholder='Enter link:'
-					type='string'
-					extra='mb-4'
-					{...register('prozorroLink', { required: 'Link is required!' })}
-				/> */}
 
 				<select
 					id='customerId'

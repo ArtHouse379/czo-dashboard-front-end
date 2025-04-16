@@ -9,6 +9,7 @@ export async function middleware(request: NextRequest, response: NextResponse) {
 
 	const isDashboardPage = url.includes('/dashboard')
 	const isAuthPage = url.includes('/auth')
+	const isAdminPage = url.includes('/manipulations')
 
 	if (isAuthPage && refreshToken) {
 		return NextResponse.redirect(new URL(DASHBOARD_PAGES.HOME, url))

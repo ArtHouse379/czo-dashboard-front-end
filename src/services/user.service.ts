@@ -10,10 +10,17 @@ export interface IProfileResponse {
 }
 
 class UserService {
-	private BASE_URL = '/user/profile'
+	private BASE_URL = 'users'
+
+	async getAll() {
+		const response = await axiosWithAuth.get<IUser[]>(`${this.BASE_URL}/all`)
+		return response.data
+	}
 
 	async getProfile() {
-		const response = await axiosWithAuth.get<IProfileResponse>(this.BASE_URL)
+		const response = await axiosWithAuth.get<IProfileResponse>(
+			`${this.BASE_URL}/profile`
+		)
 		return response.data
 	}
 
@@ -25,12 +32,15 @@ class UserService {
 	}
 
 	async getManagers() {
-		const response = await axiosWithAuth.get<IUser>(`${this.BASE_URL}/managers`)
+		const response = await axiosWithAuth.get<IUser[]>(
+			`${this.BASE_URL}/managers`
+		)
 		return response.data
 	}
 
 	async getAdmins() {
-		const response = await axiosWithAuth.get<IUser>(`${this.BASE_URL}/admins`)
+		const response = await axiosWithAuth.get<IUser[]>(`${this.BASE_URL}/admins`)
+
 		return response.data
 	}
 

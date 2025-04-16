@@ -5,9 +5,7 @@ class CustomerService {
 	private BASE_URL = '/customers'
 
 	async getAll() {
-		const response = await axiosWithAuth.get<TypeCustomerFormState[]>(
-			this.BASE_URL
-		)
+		const response = await axiosWithAuth.get<ICustomer[]>(this.BASE_URL)
 		return response.data
 	}
 

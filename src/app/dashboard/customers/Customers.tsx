@@ -40,7 +40,7 @@ export function Customers() {
 				{data?.length ? (
 					data.map(customer => (
 						<Card
-							key={customer.code}
+							key={customer.id}
 							className='w-32p flex justify-center items-center my-4'
 						>
 							<Link

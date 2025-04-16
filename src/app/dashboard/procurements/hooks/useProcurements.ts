@@ -3,7 +3,7 @@ import { procurementService } from '@/services/procurement.service'
 
 export function useProcurements() {
 	const { data, isLoading, isSuccess } = useQuery({
-		queryKey: ['procurements'],
+		queryKey: ['get-procurements'],
 		queryFn: () => procurementService.getAll()
 	})
 

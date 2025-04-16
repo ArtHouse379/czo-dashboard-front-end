@@ -1,18 +1,21 @@
-import { useProfile } from "@/hooks/useProfile"
-import { TypeUserForm } from "@/types/auth.types"
-import { useEffect } from "react"
-import { UseFormReset } from "react-hook-form"
+import { useEffect } from 'react'
+import { UseFormReset } from 'react-hook-form'
+import { TypeUserForm } from '@/types/auth.types'
+import { useProfile } from '@/hooks/useProfile'
 
 export function useInitialData(reset: UseFormReset<TypeUserForm>) {
+	const { data, isSuccess } = useProfile()
 
-    const {data, isSuccess} = useProfile()
-
-    useEffect(() => {
-        if(isSuccess && data){
-            reset({
-                email: data.user.email,
-                name: data.user.name,
-            })
-        }
-    }, [isSuccess])
+	useEffect(() => {
+		if (isSuccess && data) {
+			reset({
+				email: data.user.email,
+				name: data.user.name,
+				surname: data.user.surname,
+				isAdmin: data.user.isAdmin,
+				isGuest: data.user.isGuest,
+				isManager: data.user.isManager
+			})
+		}
+	}, [isSuccess])
 }

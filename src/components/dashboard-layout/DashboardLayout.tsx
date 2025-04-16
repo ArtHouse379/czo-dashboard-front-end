@@ -1,10 +1,14 @@
+'use client'
+
 import { PropsWithChildren } from 'react'
+import { useInitialDataDownload } from '@/store/InitialDataDownload'
 import { Header } from './header/Header'
 import { Sidebar } from './sidebar/Sidebar'
 
 export default function DashboardLayout({
 	children
 }: PropsWithChildren<unknown>) {
+	useInitialDataDownload()
 	return (
 		<div className='grid min-h-screen 2xl:grid-cols-[1fr_6fr] grid-cols-[2fr_6fr]'>
 			<Sidebar />
